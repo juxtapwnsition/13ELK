@@ -202,3 +202,47 @@ SSH into the control node and follow the steps below:
 - Copy/create the playbook file in YAML to from /etc/ansible/files to /etc/ansible/
 - Update the /etc/ansible/hosts file to include target ip addresses under their respective [groupname] heading
 - Run ansible-playbook target-playbook.yml --limit [groupname], and navigate to target servers to check that the installation worked as expected.
+
+#### Domain: Network Security
+
+**Question 1:  Faulty Firewall**
+
+Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
+
+Make sure each section of your response answers the questions laid out below.
+
+1. **Restate the Problem**
+    - A firewall has been implemented that is intended to block SSH connections, however in conducting NMAP port scanning, it is revealed that machines are exposing their SSH ports to public internet IPs.
+2. Provide a Concrete Example Scenario
+    - **In Project 1, did you allow SSH traffic to all of the VMs on your network?**
+    - In Project 1, SSH traffic was only enabled to public facing IPs to the jumpbox gateway machine. The network security group was configured so that any other ssh ports were only accessible through private vnet IP addresses.
+    - **Which VMs did accept SSH connections?**
+    - All VMs required SSH connections in order for ansible to push configuration deployments as ansible utilizes SSH as its communication medium and associated file transfer mechanisms through scp. 
+    - **What happens if you try to connect to a VM that does not accept SSH connections? Why?**
+    - Attempting to connect to a VM that does not accept SSH connections using SSH results in an error:
+     ```console
+     ssh: connect to host 127.0.0.1 port 22: Connection refused 
+     ```
+    - The reason this error occurs is because there is no SSH service listening on port 22 in order to accept and handle the connection attempt initiated by SSH.
+
+3. Explain the Solution Requirements
+    - **If one of your Project 1 VMs accepted SSH connections, what would you assume the source of the error is?**
+    - A machine accepting SSH connections indicates there is a misconfiguration in the associated network security group and inbound/outbound security rules settings
+    - **Which general configurations would you double-check?**
+    - Network security group inbound/outbound security rules should be double checked to determine if configured correctly.
+    - **What actions would you take to test that your new configurations are effective?**
+    - In order to determine the new configuration has taken effect, attempting to connect via a public IP through SSH to the target machines would determine whether the issue had been resolved.
+
+
+4. Explain the Solution Details
+    - Which specific panes in the Azure UI would you look at to investigate the problem?
+    - Which specific configurations and controls would you check?
+    - What would you look for, specifically?
+    - How would you attempt to connect to your VMs to test that your fix is effective?
+
+5. Identify Advantages/Disadvantages of the Solution
+
+    - Does your solution guarantee that the Project 1 network is now "immune" to all unauthorized access?
+
+
+    - What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?​

@@ -81,7 +81,7 @@ A summary of the access policies in place can be found in the table below.
 |--------------    |-----------------------    |--------------------------------------    |
 | RedTeamJump      | Yes                       | 99.239.131.129/32                        |
 | Web1             | Through Load Balancer     | 10.0.0.4 40.88.149.161                   |
-| Web2             | Through Load Balancer     | 10.0.1.7 40.88.149.161                   |
+| Web2             | Through Load Balancer     | 10.0.0.4 40.88.149.161                   |
 | ElkServ          | Yes                       | 99.239.131.129/32 10.0.1.6  10.0.1.7     |
 | LoadBalancer     | Yes                       | Any                                      |
 

@@ -89,7 +89,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows for consistent, reproducible deployment across unlimited scale with a write-once execute many architecture.
 
-```console
+```yaml
 install-elk.yml
 ---
 - name: Configure Elk VM with Docker
@@ -160,6 +160,27 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![2021-09-20_10-51-50](2021-09-20_10-51-50.png)
+
+### Ansible Hosts file
+```console
+  GNU nano 4.8                         hosts
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+[webservers]
+10.0.1.6 ansible_python_interpreter=/usr/bin/python3
+10.0.1.7 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+```
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:

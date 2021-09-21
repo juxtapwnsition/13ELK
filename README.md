@@ -60,7 +60,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 | Name            | Function      | IP Address     | Operating System     |
 |-------------    |-----------    |------------    |------------------    |
-| RedTeamJump     | Gateway       | 10.0.0.4       | Ubuntu 20.04         |
+| RedTeamJump     | Gateway       | 10.0.0.4 / 40.71.225.155       | Ubuntu 20.04         |
 | Web1            | DVWA1         | 10.0.1.6       | Ubuntu 20.04         |
 | Web2            | DVWA2         | 10.0.1.7       | Ubuntu 20.04         |
 | ElkServ         | ELK Stack     | 10.1.0.4       | Ubuntu 20.04         |

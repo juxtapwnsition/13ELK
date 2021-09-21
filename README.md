@@ -145,7 +145,7 @@ install-elk.yml
       systemd:
         name: docker
         enabled: yes
-
+```
 
 The playbook implements the following tasks:
 - Targets elk group in ansible hosts file as elk user

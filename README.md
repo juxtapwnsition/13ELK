@@ -211,7 +211,7 @@ Suppose you have a firewall that's supposed to block SSH connections, but instea
 
 Make sure each section of your response answers the questions laid out below.
 
-1. **Restate the Problem**
+1. Restate the Problem
     - A firewall has been implemented that is intended to block SSH connections, however in conducting NMAP port scanning, it is revealed that machines are exposing their SSH ports to public internet IPs.
 2. Provide a Concrete Example Scenario
     - **In Project 1, did you allow SSH traffic to all of the VMs on your network?**

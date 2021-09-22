@@ -236,9 +236,12 @@ Make sure each section of your response answers the questions laid out below.
 
 4. Explain the Solution Details
     - Which specific panes in the Azure UI would you look at to investigate the problem?
+    - The Network Security Group for the respective Virtual Machines should be investigated
     - Which specific configurations and controls would you check?
+    - The Inbound and Outbound security rules should be checked to determine if port 22 is open to public IP access
     - What would you look for, specifically?
     - How would you attempt to connect to your VMs to test that your fix is effective?
+    - 
 
 5. Identify Advantages/Disadvantages of the Solution
 

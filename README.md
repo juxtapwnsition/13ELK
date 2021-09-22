@@ -217,7 +217,7 @@ Make sure each section of your response answers the questions laid out below.
     - **In Project 1, did you allow SSH traffic to all of the VMs on your network?**
     - In Project 1, SSH traffic was only enabled to public facing IPs to the jumpbox gateway machine. The network security group was configured so that any other ssh ports were only accessible through private vnet IP addresses.
     - **Which VMs did accept SSH connections?**
-    - All VMs required SSH connections in order for ansible to push configuration deployments as ansible utilizes SSH as its communication medium and associated file transfer mechanisms through scp. 
+    - The scope of the activity was such that all VMs required SSH connections in order for ansible to push configuration deployments as ansible utilizes SSH as its communication medium and associated file transfer mechanisms through scp. 
     - **What happens if you try to connect to a VM that does not accept SSH connections? Why?**
     - Attempting to connect to a VM that does not accept SSH connections using SSH results in an error:
      ```console

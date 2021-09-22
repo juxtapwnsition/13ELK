@@ -235,17 +235,18 @@ Make sure each section of your response answers the questions laid out below.
 
 
 4. Explain the Solution Details
-    - Which specific panes in the Azure UI would you look at to investigate the problem?
+    - **Which specific panes in the Azure UI would you look at to investigate the problem?**
     - The Network Security Group for the respective Virtual Machines should be investigated
-    - Which specific configurations and controls would you check?
-    - The Inbound and Outbound security rules should be checked to determine if port 22 is open to public IP access
-    - What would you look for, specifically?
-    - How would you attempt to connect to your VMs to test that your fix is effective?
-    - 
+    - **Which specific configurations and controls would you check?**
+    - The Inbound and Outbound security rules should be checked 
+    - **What would you look for, specifically?**
+    - That there are no rules enabling public IP access to Port 22
+    - **How would you attempt to connect to your VMs to test that your fix is effective?**
+    - Attempting to connect via a public IP through SSH to the target machines would determine whether the issue had been resolved.
 
 5. Identify Advantages/Disadvantages of the Solution
 
-    - Does your solution guarantee that the Project 1 network is now "immune" to all unauthorized access?
-
-
-    - What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?​
+    - **Does your solution guarantee that the Project 1 network is now "immune" to all unauthorized access?**
+    - With the testing outlined, and an inability to connect through SSH to port 22 from a public IP address, it can be said conclusively that the issue has been resolved
+    - **What monitoring controls might you add to ensure that you identify any suspicious authentication attempts?**
+    - An ELK solution with alerts configured to notify of any connections made via port 22 would identify suspicious authentication attempts

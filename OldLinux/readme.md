@@ -9,6 +9,6 @@
 **state.sh**: Script checks a few different state names including one user supplied variable and reminds you that Hawaii is a better state. This was broken during testing of the IFS tag. It probably won't be fixed. It still works, but it's not /overly/ verbose. Consider it built-in debugging mode.
 
 **sys_info.sh**: Script prints Date, Time, Timezone, Year, Operating System, IP Address, Host machine name
-![2021-09-20_17-19-03](2021-09-20_17-19-03.png)
+![2021-09-20_17-19-03](../Images/2021-09-20_17-19-03.png)
 
 **test.sh**: Script takes user input after script name as variable and is able to tell if it is less than 10 or not. Absolutely cutting edge.
